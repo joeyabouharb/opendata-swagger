@@ -401,7 +401,7 @@ class TripPlannerApi(object):
                  returns the request thread.
         """
 
-        all_params = ['output_format', 'coord_output_format', 'type_dm', 'name_dm', 'dep_arr_macro', 'itd_date', 'itd_time', 'mode', 'name_key_dm', 'tf_nswdm', 'version']  # noqa: E501
+        all_params = ['output_format', 'coord_output_format', 'type_dm', 'name_dm', 'dep_arr_macro', 'itd_date', 'itd_time', 'mode', 'name_key_dm', 'tf_nswdm', 'version', 'exclusions', 'exclude_means']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -472,6 +472,16 @@ class TripPlannerApi(object):
             query_params.append(('TfNSWDM', params['tf_nswdm']))  # noqa: E501
         if 'version' in params:
             query_params.append(('version', params['version']))  # noqa: E501
+        if 'exclude_means' in params:
+            query_params.append(('excludedMeans', params['exclude_means']))
+        valid_exclusions = [
+            'exclMOT_1', 'exclMOT_4', 'exclMOT_5',
+            'exclMOT_7', 'exclMOT_9', 'exclMOT_11'
+        ]
+        if 'exclusions' in params:
+            for key, value in params['exclusions'].items():
+                if key in valid_exclusions:
+                    query_params.append((key, value))
 
         header_params = {}
 
