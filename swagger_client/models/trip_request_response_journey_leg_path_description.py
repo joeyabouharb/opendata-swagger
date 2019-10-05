@@ -156,7 +156,7 @@ class TripRequestResponseJourneyLegPathDescription(object):
         :param manoeuvre: The manoeuvre of this TripRequestResponseJourneyLegPathDescription.  # noqa: E501
         :type: str
         """
-        allowed_values = ["LEAVE", "KEEP", "TURN", "ENTER", "CONTINUE"]  # noqa: E501
+        allowed_values = ["ENTER_BUILTUPAREA", "LEAVE", "KEEP", "TURN", "ENTER", "CONTINUE", "ORIGIN", "LEAVE_BUILTUPAREA"]  # noqa: E501
         if manoeuvre not in allowed_values:
             raise ValueError(
                 "Invalid value for `manoeuvre` ({0}), must be one of {1}"  # noqa: E501

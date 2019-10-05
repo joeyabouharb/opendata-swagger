@@ -79,7 +79,7 @@ class TripRequestResponseJourneyLegStopFootpathInfo(object):
         :param position: The position of this TripRequestResponseJourneyLegStopFootpathInfo.  # noqa: E501
         :type: str
         """
-        allowed_values = ["AFTER", "IDEST"]  # noqa: E501
+        allowed_values = ["AFTER", "IDEST", "BEFORE"]  # noqa: E501
         if position not in allowed_values:
             raise ValueError(
                 "Invalid value for `position` ({0}), must be one of {1}"  # noqa: E501
