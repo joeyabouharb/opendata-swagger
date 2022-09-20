@@ -15,6 +15,6 @@ six==1.12.0
 -e /home/joey/.local/lib/python3.7/site-packages
 -e git+https://github.com/joeyabouharb/trip-planner-app.git@a538eaa9b45f98d4a26a9501d761a2f4f8115a94#egg=trip_planner
 typed-ast==1.4.0
-urllib3==1.25.6
+urllib3==1.26.5
 Werkzeug==0.16.0
 wrapt==1.11.2
